@@ -9,7 +9,7 @@ import (
 	"github.com/spf13/cobra"
 )
 
-const VERSION = "0.1.1"
+const VERSION = "0.2.0"
 
 func main() {
 	var rootCmd = &cobra.Command{
@@ -23,6 +23,7 @@ func main() {
 	rootCmd.CompletionOptions.DisableDefaultCmd = true
 
 	rootCmd.AddCommand(cmd.NewRunCmd())
+	rootCmd.AddCommand(cmd.NewPackCmd())
 	rootCmd.AddCommand(&cobra.Command{
 		Use:   "version",
 		Short: "Displays the version of kq",
