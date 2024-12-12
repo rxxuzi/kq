@@ -15,7 +15,6 @@ import (
 )
 
 func main() {
-	// フラグの定義
 	sizeFlag := flag.String("size", "900x600", "Window size in WIDTHxHEIGHT format")
 	flag.Parse()
 
